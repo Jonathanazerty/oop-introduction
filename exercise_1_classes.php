@@ -7,6 +7,7 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 require 'exercise_1_classes_beverage.php';
+require 'exercise_2_extending.php';
 
 /* EXERCISE 1
 Create a class beverage.
@@ -20,14 +21,15 @@ print the temperature on the screen.
 USE TYPEHINTING EVERYWHERE!
 */
 
-$BloodyMary = new Beverage ('Bloody Mary', 9, 'red');
-$Mojito = new Beverage ('Mojito', 8, 'green');
-$JackDaniels = new Beverage ('Jack Daniels', 10, 'room temperature', 'black');
-$MintTea = new Beverage ('Mint Tea', 4, 'warm', 'dark yellow');
-$Coke = new Beverage ('Coca Cola', 2, 'black');
+$BloodyMary = new Beverage ( 9, 'red');
+$Mojito = new Beverage ( 8, 'green');
+$JackDaniels = new Beverage ( 10, 'black', 'room temperature');
+$MintTea = new Beverage ( 4, 'dark yellow', 'warm');
+$Coke = new Beverage ( 2, 'black');
 
-$BloodyMary->getInfo();
-$Mojito->getInfo();
-$JackDaniels->getInfo();
-$MintTea->getInfo();
-$Coke->getInfo();
+
+$BloodyMary -> getInfo();
+$Mojito -> getInfo();
+$JackDaniels -> getInfo();
+$MintTea -> getInfo();
+$Coke -> getInfo();
