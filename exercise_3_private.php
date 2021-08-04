@@ -38,9 +38,14 @@ class beers extends Beverage
         return $this->color = $color;
     }
 
-    public function beerInfo ()
+    private function beerInfo ()
     {
-        return "Hi i'm {$this->name} and have an alcohol percentage of {$this->alcoholpercentage}% and I have a {$this->color} color.<br>";
+        echo "Hi i'm {$this->name} and have an alcohol percentage of {$this->alcoholpercentage}% and I have a {$this->color} color.<br>";
+    }
+
+    public function getBeerInfo ()
+    {
+        return $this->beerInfo();
     }
 
 };
@@ -48,4 +53,4 @@ class beers extends Beverage
 $Duvel = new beers ( 3.5, 'blond', '', 'Duvel', 8.5 );
 
 $Duvel -> changeColor('light');
-echo $Duvel -> beerInfo();
+$Duvel -> getBeerInfo();
