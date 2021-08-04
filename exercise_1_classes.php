@@ -8,6 +8,7 @@ error_reporting(E_ALL);
 
 require 'exercise_1_classes_beverage.php';
 require 'exercise_2_extending.php';
+require 'exercise_3_private.php';
 
 /* EXERCISE 1
 Create a class beverage.
@@ -25,11 +26,9 @@ $BloodyMary = new Beverage ( 9, 'red');
 $Mojito = new Beverage ( 8, 'green');
 $JackDaniels = new Beverage ( 10, 'black', 'room temperature');
 $MintTea = new Beverage ( 4, 'dark yellow', 'warm');
-$Coke = new Beverage ( 2, 'black');
 
 
 $BloodyMary -> getInfo();
 $Mojito -> getInfo();
 $JackDaniels -> getInfo();
 $MintTea -> getInfo();
-$Coke -> getInfo();

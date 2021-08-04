@@ -13,3 +13,39 @@ Make sure that you use the variables and not just this text line.
 Print this method on the screen on a new line.
 USE TYPEHINTING EVERYWHERE!
 */
+
+
+class beers extends Beverage
+{
+    private string $name;
+    private float $alcoholpercentage;
+
+    public function __construct( float $price, string $color, string $temperature, string $name, float $alcoholpercentage)
+    {
+        parent::__construct( $price, $color, $temperature="cold");
+        $this->name = $name;
+        $this->alcoholpercentage  = $alcoholpercentage;
+    }
+
+    public function getAlcoholpercentage ()
+    {
+        return "The {$this->name} is {$this->temperature} and {$this->color}. Price : {$this->price} € and has an alcohol percentage of {$this->alcoholpercentage} % <br>";
+        echo "The {$this->name} is {$this->temperature} and {$this->color}. Price : {$this->price} € and has an alcohol percentage of {$this->alcoholpercentage} % <br>";
+    }
+
+    public function changeColor($color)
+    {
+        return $this->color = $color;
+    }
+
+    public function beerInfo ()
+    {
+        return "Hi i'm {$this->name} and have an alcohol percentage of {$this->alcoholpercentage}% and I have a {$this->color} color.<br>";
+    }
+
+};
+
+$Duvel = new beers ( 3.5, 'blond', '', 'Duvel', 8.5 );
+
+$Duvel -> changeColor('light');
+echo $Duvel -> beerInfo();
