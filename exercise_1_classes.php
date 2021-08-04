@@ -2,6 +2,12 @@
 
 declare(strict_types=1);
 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
+require 'exercise_1_classes_beverage.php';
+
 /* EXERCISE 1
 Create a class beverage.
 Create the properties color (string), price (float) and temperature (string) and also foresee a construct.
@@ -13,3 +19,15 @@ Instantiate an object which represents cola. Make sure that the color is set to 
 print the temperature on the screen.
 USE TYPEHINTING EVERYWHERE!
 */
+
+$BloodyMary = new Beverage ('Bloody Mary', 9, 'red');
+$Mojito = new Beverage ('Mojito', 8, 'green');
+$JackDaniels = new Beverage ('Jack Daniels', 10, 'room temperature', 'black');
+$MintTea = new Beverage ('Mint Tea', 4, 'warm', 'dark yellow');
+$Coke = new Beverage ('Coca Cola', 2, 'black');
+
+$BloodyMary->getInfo();
+$Mojito->getInfo();
+$JackDaniels->getInfo();
+$MintTea->getInfo();
+$Coke->getInfo();
